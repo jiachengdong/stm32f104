@@ -1,0 +1,15 @@
+在Keil中编译工程成功后，在下面的Bulid Ouput窗口中会输出下面这样一段信息：
+
+Program Size: Code=6320  RO-data=4864  RW-data=44  ZI-data=1636  
+
+代表的意思：
+Code ：是程序中代码所占字节大小
+RO-data ：程序中所定义的指令和常量大小 （个人理解 ：Read Only）
+RW-data ：程序中已初始化的变量大小 (个人理解”：Read/Write)
+ZI-Data ：程序中未初始化的变量大小 (个人理解 ：Zero Initialize)
+
+ROM(Flash) size = Code+RO-data+RW-data;
+
+RAM size = RW-data+ZI-data
+
+可以通过.map查看占用的flash和ram大小
